@@ -82,7 +82,6 @@ public class AuthenticationRestControllerV1 {
             return ResponseEntity.ok(jwtTokenProvider.getResponseWithToken(user));
         } catch (AuthenticationException e) {
             return new ResponseEntity("Invalid username or password", HttpStatus.NOT_ACCEPTABLE);
-            /*throw new BadCredentialsException("Invalid username or password");*/
         }
     }
 }
